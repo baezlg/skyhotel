@@ -75,6 +75,7 @@ const Featured = () => {
             selectsDisabledDaysInRange
             className="featured__booking-date"
             id="date"
+            minDate={Date.now()}
           />
           <h4>
             {days > 1

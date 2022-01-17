@@ -4,6 +4,7 @@
   --white: #fff;
   --light-black: #666;
   --light-white: #ccc;
+  --milk-color-bg: #fafaf8;
   --light-bg: #f5f5f5;
   --dark-bg: rgba(0, 0, 0, 0.7);
   --border: 0.1rem solid #aaa;
@@ -84,4 +85,29 @@ section {
   font-size: 3rem;
   color: var(--primary-color);
   letter-spacing: 0.3rem;
+}
+
+.heading-md {
+  font-size: 4rem;
+  color: var(--black);
+  letter-spacing: 0.3rem;
+  @media only screen and (max-width: 1222px) {
+    font-size: 2rem;
+  }
+}
+.heading-lg {
+  font-size: 6rem;
+  color: var(--primary-color);
+  letter-spacing: 0.3rem;
+  width: 50%;
+  font-weight: 400;
+
+  @media only screen and (max-width: 1222px) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (max-width: 758px) {
+    font-size: 3rem;
+    width: 70%;
+  }
 }
