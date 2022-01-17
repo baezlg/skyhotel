@@ -1,0 +1,38 @@
+.services {
+  &__container {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+
+    @media only screen and(max-width: 682px) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    @media only screen and(max-width: 450px) {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+  }
+  &__box {
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+  }
+  &__icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+  }
+  &__info {
+    &-heading {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    &-text {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+    }
+  }
+}

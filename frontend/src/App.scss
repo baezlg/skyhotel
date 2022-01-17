@@ -76,3 +76,12 @@ a {
     cursor: not-allowed;
   }
 }
+section {
+  padding: 5rem 10%;
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--primary-color);
+  letter-spacing: 0.3rem;
+}
