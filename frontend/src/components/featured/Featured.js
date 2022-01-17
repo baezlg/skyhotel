@@ -6,13 +6,14 @@ import "react-datepicker/dist/react-datepicker.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "./Featured.scss";
-import CustomButton from "../customButton/CustomButton";
 SwiperCore.use([Autoplay]);
 
 const Featured = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState();
   const [days, setDays] = useState(0);
+  const [guests, setGuests] = useState(1);
+  const [disabled, setDisabled] = useState(true);
 
   const onChange = (dates) => {
     setDays(0);
@@ -22,12 +23,12 @@ const Featured = () => {
     if (end) {
       var Difference_In_Time = end?.getTime() - start?.getTime();
       var Difference_In_Days = Number(Difference_In_Time) / (1000 * 3600 * 24);
-      setDays(Difference_In_Days);
+      setDays(Math.ceil(Difference_In_Days));
     }
   };
 
   const handleClick = () => {
-    console.log("hello");
+    console.log(startDate, endDate, days, guests);
   };
   return (
     <div className="featured">
@@ -83,6 +84,7 @@ const Featured = () => {
           <label htmlFor="guests">
             Guests:{" "}
             <select
+              onChange={(e) => setGuests(e.target.value)}
               name="guests"
               id="guests"
               className="featured__booking-guests"
@@ -91,9 +93,13 @@ const Featured = () => {
               <option value="2">2</option>
             </select>
           </label>
-          <CustomButton onClick={handleClick} days={days}>
+          <button
+            className="btn"
+            onClick={handleClick}
+            disabled={days < 1 && disabled}
+          >
             Check Availability
-          </CustomButton>
+          </button>
         </div>
       </Swiper>
     </div>
