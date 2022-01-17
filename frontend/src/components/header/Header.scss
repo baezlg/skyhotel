@@ -1,0 +1,78 @@
+.header {
+  padding: 5rem 10%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  z-index: 1000;
+
+  @media only screen and(max-width: 1200px) {
+    padding: 3rem 5%;
+  }
+
+  @media only screen and(max-width: 991px) {
+    padding: 3rem 2rem;
+  }
+
+  &__logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  &__menu-btn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+
+    @media only screen and(max-width: 768px) {
+      display: inline-block;
+
+      &.fa-times {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.navbar {
+  &.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  @media only screen and(max-width: 768px) {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  &__link {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--light-black);
+    display: inline-block;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    @media only screen and(max-width: 768px) {
+      display: block;
+      margin: 2rem;
+    }
+  }
+}
