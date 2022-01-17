@@ -1,0 +1,18 @@
+.featured {
+  position: relative;
+  padding: 0;
+  background: var(--black);
+
+  &__slide {
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
