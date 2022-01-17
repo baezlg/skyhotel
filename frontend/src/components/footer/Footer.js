@@ -35,8 +35,8 @@ const Footer = () => {
         </div>
         <div className="footer__contact">
           <h3 className="heading-sm">CONTACT</h3>
-          <h4>10 (78) 273 3563</h4>
-          <h4>info@ocheandeview.com</h4>
+          <h4>55 (55) 555 5555</h4>
+          <h4>info@skyhotel.com</h4>
           <div className="footer__social">
             <i className="fab fa-facebook-f"></i>
             <i className="fab fa-instagram"></i>

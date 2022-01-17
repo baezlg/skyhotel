@@ -19,6 +19,9 @@
       color: var(--primary-color);
     }
   }
+  &__link:hover {
+    transform: translateX(0.5rem);
+  }
 
   &__bottom {
     font-size: 1.6rem;
