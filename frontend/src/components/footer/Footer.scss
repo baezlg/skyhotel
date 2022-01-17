@@ -1,0 +1,62 @@
+.footer {
+  background: var(--light-black);
+  color: var(--white);
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: 698px) {
+      justify-items: self-start;
+    }
+  }
+
+  &__menu {
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  &__bottom {
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+  }
+  &__about {
+    font-size: 1.5rem;
+  }
+  &__text {
+    width: 70%;
+    margin-top: 2rem;
+  }
+  &__link {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  &__contact {
+    h4 {
+      font-size: 1.7rem;
+      margin: 1.5rem 0;
+      font-weight: 300;
+    }
+  }
+  &__social {
+    text-align: center;
+    i {
+      display: inline-block;
+      font-size: 1.7rem;
+      margin: 0 0.5rem;
+      color: var(--primary-color);
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(0.5rem);
+      }
+    }
+  }
+}
