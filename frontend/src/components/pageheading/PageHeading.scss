@@ -1,0 +1,27 @@
+.pageheading {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 10rem 5rem;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black-color-transparent);
+    z-index: -1;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+}

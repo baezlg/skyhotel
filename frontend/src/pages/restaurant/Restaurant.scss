@@ -1,0 +1,18 @@
+.restaurant {
+  &__menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+  &__menu-box {
+    margin: 1rem 0;
+    h3 {
+      font-size: 1.4rem;
+      margin: 0.5rem;
+    }
+    span {
+      display: block;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+}

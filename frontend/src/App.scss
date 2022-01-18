@@ -101,6 +101,12 @@ section {
   letter-spacing: 0.3rem;
   width: 50%;
   font-weight: 400;
+  z-index: 30;
+
+  &.white {
+    color: var(--white);
+    z-index: 30;
+  }
 
   @media only screen and (max-width: 1222px) {
     font-size: 4rem;

@@ -1,0 +1,33 @@
+.contact {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+
+  .form {
+    &__input {
+      display: block;
+      width: 100%;
+      padding: 2rem 4rem;
+      border: 1px solid var(--light-black);
+      margin: 1rem 0;
+      font-size: 1.6rem;
+    }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    h3 {
+      font-weight: 400;
+      margin: 1rem;
+      i {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
